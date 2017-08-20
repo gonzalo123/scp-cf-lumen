@@ -54,4 +54,4 @@ $app->group(['middleware' => 'auth'], function (Application $app) {
 $app->run();
 ```
 
-In summary: Lumen is cool. The interface is very similar to Silex. I can swap my mind from thinking in Silex to thinking in Lumen easily. Blade instead Twig: no problem. Service provider are very similar. Routing is almost the same. Middlewares are much better
+In summary: Lumen is cool. The interface is very similar to Silex. I can swap my mind from thinking in Silex to thinking in Lumen easily. Blade instead Twig: no problem. Service providers are very similar. Routing is almost the same and Middlewares are much better. Nowadays backend is a commodity for me so I don't want to spend to much time working on it. I want something that just work. Lumen looks like that. 
