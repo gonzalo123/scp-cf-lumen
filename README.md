@@ -32,15 +32,17 @@ $app->register(App\Providers\StdoutLogServiceProvider::class);
 $app->register(App\Providers\DbServiceProvider::class);
 $app->register(App\Providers\RedisServiceProvider::class);
 
-$app->group(['middleware' => 'auth'], function (Application $app) {
-    $app->get("/", function () {
+$router = $app->router;
+
+$router->group(['middleware' => 'auth'], function (Router $router) {
+    $router->get("/", function () {
         return view("index", [
             'user' => config("user"),
             'ttl'  => getenv('TTL'),
         ]);
     });
 
-    $app->get("/timestamp", function (Client $redis, PDO $conn) {
+    $router->get("/timestamp", function (Client $redis, PDO $conn) {
         if (!$redis->exists('timestamp')) {
             $stmt = $conn->prepare('SELECT localtimestamp');
             $stmt->execute();
