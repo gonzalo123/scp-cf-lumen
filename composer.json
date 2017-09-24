@@ -3,7 +3,7 @@
     "ext-pdo": "*",
     "ext-pdo_pgsql": "*",
     "predis/predis": "^1.1",
-    "laravel/lumen-framework": "^5.4",
+    "laravel/lumen-framework": "^5.5",
     "vlucas/phpdotenv": "^2.4"
   },
   "autoload": {
