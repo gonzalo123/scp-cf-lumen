@@ -2,6 +2,7 @@
 
 use App\Http\Middleware;
 use Laravel\Lumen\Application;
+use Laravel\Lumen\Routing\Router;
 use Predis\Client;
 
 if (php_sapi_name() == "cli-server") {
